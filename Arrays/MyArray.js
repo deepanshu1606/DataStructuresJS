@@ -44,8 +44,8 @@ class ArrayImplementation{
     /*
     Method Type : Main Method
     Description : This method is used to delete last element of an array.
-    Time Complexity : 
-    Space Complexity : 
+    Time Complexity : O(1)
+    Space Complexity : O(1)
     */
     pop(){
         var elementDeleted = this.data[this.length-1];
@@ -57,8 +57,8 @@ class ArrayImplementation{
     /*
     Method Type : Main Method
     Description : This method is used to delete an  element at specific index in array.
-    Time Complexity : 
-    Space Complexity : 
+    Time Complexity : O(n)
+    Space Complexity : O(1)
     */
     delete(index){
         var elementDeleted = this.data[index];
@@ -70,8 +70,8 @@ class ArrayImplementation{
     /*
     Method Type : Main Method
     Description : This method is used to insert an  element at a specific index in array.
-    Time Complexity : 
-    Space Complexity : 
+    Time Complexity :   O(n)
+    Space Complexity :  O(1)
     */
     insert(index, element){
         this.shiftElementsRight(index);
@@ -82,8 +82,8 @@ class ArrayImplementation{
     /*
     Method Type : Utility Method
     Description : This method is used to shift elements one index right and delete the last element copy. Mainly used for inserting an element in an array at a specific location.
-    Time Complexity : 
-    Space Complexity : 
+    Time Complexity : O(n)
+    Space Complexity :  O(1)
     */
     shiftElementsRight(index){
         for(var i = (this.length-1); i >=index ; i--){
@@ -94,8 +94,8 @@ class ArrayImplementation{
     /*
     Method Type : Utility Method
     Description : This method is used to shift elements one index left and delete the last element copy. Mainly used for deleting an element in an array at a specific location.
-    Time Complexity : 
-    Space Complexity : 
+    Time Complexity : O(n)
+    Space Complexity :  O(1)
     */
     shiftElementsLeft(index){
         for(var i = index; i<this.length ; i++){
@@ -104,11 +104,3 @@ class ArrayImplementation{
     }
 }
 
-//Un comment this code to check functionalities
-// const aa = new ArrayImplementation();
-// aa.push('Hi'); //0
-// aa.push('How');//1
-// aa.push('are');//2
-// aa.push('you');//3
-// aa.insert(0,'hellooo');
-// console.log(aa);
