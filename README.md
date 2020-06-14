@@ -5,4 +5,4 @@
 
 1) Arrays
 
---> All the code in this repository have been analyzed for space and time complexity.
+--> All the code in this repository has analysis for space and time complexity.
