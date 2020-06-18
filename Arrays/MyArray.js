@@ -62,7 +62,7 @@ class ArrayImplementation{
     */
     delete(index){
         var elementDeleted = this.data[index];
-        this.shiftElementsLeft(index);
+        this._shiftElementsLeft(index);
         delete this.data[this.length-1];
         this.length--;
     }
@@ -74,30 +74,30 @@ class ArrayImplementation{
     Space Complexity :  O(1)
     */
     insert(index, element){
-        this.shiftElementsRight(index);
+        this._shiftElementsRight(index);
         this.data[index] = element;
         this.length++;
     }
 
     /*
-    Method Type : Utility Method
+    Method Type : Internal Utility Method
     Description : This method is used to shift elements one index right and delete the last element copy. Mainly used for inserting an element in an array at a specific location.
     Time Complexity : O(n)
     Space Complexity :  O(1)
     */
-    shiftElementsRight(index){
+    _shiftElementsRight(index){
         for(var i = (this.length-1); i >=index ; i--){
             this.data[i+1] = this.data[i];
         }
     }
 
     /*
-    Method Type : Utility Method
+    Method Type : Internal Utility Method
     Description : This method is used to shift elements one index left and delete the last element copy. Mainly used for deleting an element in an array at a specific location.
     Time Complexity : O(n)
     Space Complexity :  O(1)
     */
-    shiftElementsLeft(index){
+    _shiftElementsLeft(index){
         for(var i = index; i<this.length ; i++){
             this.data[i+1] = this.data[i];
         }
