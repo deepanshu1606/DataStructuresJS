@@ -1,3 +1,18 @@
+/***************************************************************************************************************************************
+
+Class : HashTablesImplementation
+
+Comments : Hash Tables is implemented with help of multi-dimensional arrays.
+Modification logs: 
+Log : 1 (20 June 2020) --> Increased readibility and updated complexities
+
+****************************************************************************************************************************************
+Developer           Date            Version         Description
+****************************************************************************************************************************************
+Deepanshu        17 June 2020        V1.1           Implementation of HashTable DataStructure in Java Script.
+
+
+***************************************************************************************************************************************/
 class HashTablesImplementation{
     //Creating an array of size defined by the user
     constructor(size){
@@ -7,8 +22,9 @@ class HashTablesImplementation{
     /*
     Method Type : Internal Utility Method
     Description : This method is used to create a hash code which will be treated as address location.
-    Time Complexity :   O(n)
-    Space Complexity :  O(n)
+    Time Complexity :   O(1)
+    Space Complexity :  O(1)
+    @param : key (for which hash code needs to be generated)
     */
     _hash(key){
         var hash = 0;
@@ -21,8 +37,10 @@ class HashTablesImplementation{
     /*
     Method Type : Main Method
     Description : This method is used to create a new key-value pair in hash table.
-    Time Complexity :   
-    Space Complexity :  
+    Time Complexity :   O(1)
+    Space Complexity :  O(1)
+    @param : key (Which is to be inserted)  
+    @param : Value (corresponding to the key)
     */
     set(key, value){
         //Getting the address where the key will be stored
@@ -37,8 +55,10 @@ class HashTablesImplementation{
     /*
     Method Type : Main Method
     Description : This method is used to get a value corresponding to the key passed.
-    Time Complexity :   
-    Space Complexity :  
+    Time Complexity :   O(1)
+                        O(n) --> With collision
+    Space Complexity :  O(1)
+    @param : key (Value to be fetched)
     */
     get(key){
         var addressOfKey = this._hash(key);
@@ -56,8 +76,9 @@ class HashTablesImplementation{
     /*
     Method Type : Main Method
     Description : This method is used to extract all keys from Hash Table
-    Time Complexity :   
-    Space Complexity :  
+    Time Complexity : O(n)  
+    Space Complexity :  O(n)
+    @param : N/A
     */
     keys(){
         var keys = [];
